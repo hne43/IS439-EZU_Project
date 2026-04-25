@@ -1,0 +1,11 @@
+** Possible Customization 1: Adding Direct Links to Related Objects **
+When developing and testing the list and detail, we often need to move between related objects (Student, Section, Course, etc.).
+Right now, we need to manually search for related records in the Django Admin or navigate through different pages to inspect them.
+However, if we customize the Django Admin interface to include direct links to those related objects, we can more easily
+access related data when verifying whether urls.py , views.py or templates are working correctly.
+
+For example, on the Instructor admin page, we can display clickable links to the section. This would allow us to quickly
+navigate to the related records and verify that everything is working well.
+
+To implement this customization, we would need to define a ModelAdmin class in admin.py and include related fields in the
+list_display attribute. We could also define custom methods inside the ModelAdmin class to generate clickable links.

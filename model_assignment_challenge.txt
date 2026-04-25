@@ -1,0 +1,22 @@
+** Possible Customization 1: Improving the List Display View **
+When verifying that our models are implemented correctly, we currently need to open each record individually (for
+example: Course, Instructor, Section, Student, stc.) to inspect its details and relationships. However, if we customize
+the Django Admin list play, we will be able to see the most important information directly on the list page.
+For example, the Course list view could display not only the course name, but also the associated section(s),
+instructor(s), and the number of enrolled student(s). This would reduce repetitive clicking and make it faster to
+confirm that relationships are implemented as how we want them to be.
+
+To implement this customization, we would need to define a ModelAdmin class in admin.py and add the `list_display`
+attribute to include relevant fields.
+
+
+** Possible Customization 2: Adding Search and Filtering Capabilities **
+Another helpful customization that might make our work more efficient would be adding search and filtering functionality
+to the Django Admin interface. Although we currently do not have many records in the system, locating specific entries is
+not yet difficult or time-consuming. As the number of records increases, it will become increasingly time-consuming for us
+to locate a specific data within large datasets. By having a search bar and sidebar filters, we can quickly narrow down
+records. For example, if we're only looking for IS classes, we can just filter out all the other courses, instead of
+scrolling through hundreds of courses just to find IS courses.
+
+To implement this customization, we would need to modify the ModelAdmin class by adding the `search_fields` and
+`list_filter` attributes and specifying the model fields.
